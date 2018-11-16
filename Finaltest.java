@@ -23,7 +23,7 @@ import utility.ExcelUtils;
  
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
  
-      driver.get("https://www.google.com/");	 
+      driver.get("https://www.google.com/");	 // Enter the URL
  
   }	
  
@@ -40,8 +40,7 @@ import utility.ExcelUtils;
  
 		System.out.println(Googlesearch);
   }
- 
- 
+  
   @DataProvider
  
   public Object[][] Authentication() throws Exception{
