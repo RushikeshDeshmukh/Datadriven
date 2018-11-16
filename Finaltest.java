@@ -31,33 +31,27 @@ import utility.ExcelUtils;
  
   public void f(String Images, String Googlesearch) {
  
-	 //   driver.findElement(By.xpath(".//*[@id='account']/a")).click();
- 
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.findElement(By.xpath("//*[@id='lst-ib']")).sendKeys(Images);
  
-		System.out.println(Images);
+	    System.out.println(Images);
  
 	    driver.findElement(By.id("//*[@id='tsf']/div[2]/div[3]/center/input[1]")).Click();
  
 		System.out.println(Googlesearch);
   }
  
-
  
   @DataProvider
  
   public Object[][] Authentication() throws Exception{
- 
- 
+  
 	 	ExcelUtils.setExcelFile("/DataDriven/src/Data/TestData.xlsx");
  
 	 	sTestCaseName = this.toString();
- 
-	  	
+ 	  	
 	  	sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
- 
-	
+ 	
 	 	iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
  
 	    Object[][] testObjArray = ExcelUtils.getTableArray("/DataDriven/src/Data/TestData.xlsx","Sheet1",iTestCaseRow);
